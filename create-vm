@@ -6,7 +6,7 @@
 # This script creates an ubuntu vm
 #
 # Arguments:
-#   <name>				Name of the virtual machine to create
+#   <name>			Name of the virtual machine to create
 #
 #   <seed-image>			Name of the cloud-init seed image to use
 #
