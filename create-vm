@@ -139,6 +139,10 @@ if [ -z IMAGE_RESIZE ]; then
 fi
 
 mv $VM_IMAGE $IMAGE_POOL_DIR
+if [ $? -ne 0 ]; then
+   echo "Unable to move vm to pool $IMAGE_POOL_DIR, check permissions"
+   exit $?
+fi
 
 VM_CMD="virt-install --noautoconsole --import --autostart --graphics none --os-type=$VM_OS_TYPE --os-variant=$VM_OS_VARIANT --ram $VM_RAM --vcpu $VM_CPU --disk $IMAGE_POOL_DIR/$VM_IMAGE,device=disk,bus=virtio --name $VM_NAME"
 
