@@ -1,2 +1,2 @@
-# kvm_guest
-script to create a kvm guest
+# create a ubuntu vm
+script to create a ubuntu vm
