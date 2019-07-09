@@ -130,7 +130,7 @@ else
   echo "Image converted & installed"
 fi
 
-if [ -z IMAGE_RESIZE ]; then
+if [ ! -z "$IMAGE_RESIZE" ]; then
    qemu-img resize $VM_IMAGE +$IMAGE_RESIZE
    if [ $? -ne 0 ]; then
      echo "Unable to resize image"
